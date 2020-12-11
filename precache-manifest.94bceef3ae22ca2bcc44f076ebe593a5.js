@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "370633a31c43e172bfbf59c25b4872ee",
+    "revision": "f2011f0793d5f822846dc6db91ec8911",
     "url": "/room-home-page/index.html"
   },
   {
-    "revision": "a42a6f37cd42b3960962",
-    "url": "/room-home-page/static/css/main.46c006b3.chunk.css"
+    "revision": "3379e2f8c8f567796492",
+    "url": "/room-home-page/static/css/main.43a947d8.chunk.css"
   },
   {
     "revision": "d08130a269f4536c9142",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/room-home-page/static/js/2.a340796c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a42a6f37cd42b3960962",
-    "url": "/room-home-page/static/js/main.101abaf8.chunk.js"
+    "revision": "3379e2f8c8f567796492",
+    "url": "/room-home-page/static/js/main.7c4d43c7.chunk.js"
   },
   {
     "revision": "cb6be93affca15991c11",
