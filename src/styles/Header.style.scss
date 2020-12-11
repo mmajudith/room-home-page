@@ -1,0 +1,291 @@
+.header {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  position: relative;
+  .header-nav-wrapper {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    .header-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin-top: 40px;
+      margin-left: 40px;
+      .menu-wrapper {
+        display: none;
+        .open {
+          width: 25px;
+        }
+        .close {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .logo-wrapper {
+        margin: 0px 30px 0px 25px;
+      }
+      .items {
+        position: relative;
+        li {
+          float: left;
+          color: $White;
+          text-transform: lowercase;
+          margin: 0px 15px;
+          position: relative;
+          font-weight: 700;
+          &:hover {
+            cursor: pointer;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 15px;
+              top: 18px;
+              left: 10px;
+              border-bottom: 2px solid $White;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slides {
+    width: 100%;
+    height: 100%;
+    margin: auto auto;
+    position: relative;
+    top: 0px;
+    z-index: 1;
+    .slide-container {
+      width: 100%;
+      margin: auto;
+      height: 534px;
+      .image-text-container {
+        width: 100%;
+        height: 100%;
+        transition: left 2s;
+        .float {
+          width: 100%;
+          height: 100%;
+          float: left;
+          display: none;
+          .images-txt-wrapper {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            .image-slide{
+              width: 65%;
+              height: 100%;
+              img{
+                width: 100%;
+                height: 100%;
+              }
+            }
+            .text-slide {
+              width: 35%;
+              margin: auto 5%;
+              text-align: left;
+              h2 {
+                color: $Black;
+                font-weight: 700;
+                line-height: 35px;
+                font-size: 34px;
+                padding-bottom: 15px;
+              }
+              p {
+                line-height: 20px;
+              }
+              .arrow {
+                margin-top: 15px;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                img {
+                  margin-top: 5px;
+                  margin-left: 15px;
+                }
+                &:hover {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .angles-wrapper {
+        background-color: $Black;
+        width: 170px;
+        height: 64.5px;
+        position: absolute;
+        top: 88%;
+        left: 58.5%;
+        .angle-left,.angle-right {
+          padding: 20px 35.5px;
+          &:hover {
+            background-color: $VeryDarkGray;
+            cursor: pointer;
+          }
+        }
+      }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .header {
+    .slides {
+      .slide-container {
+        .image-text-container {
+          .float {
+            .images-txt-wrapper {
+              .image-slide{
+                width: 55%;
+              }
+              .text-slide{
+                width: 45%;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+        .angles-wrapper {
+          left: 49.5%;
+        }
+      
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .open-nav {
+      width: 100%;
+      .header-nav-wrapper{
+        width: 100%;
+        .header-nav{
+          position: relative;
+          .menu-wrapper {
+            display: block;
+            .open {
+              display: none;
+            }
+            .close {
+              display: block;
+              cursor: pointer;
+            }
+          }
+          .logo-wrapper{
+            display: block;
+            position:  absolute;
+            top: 5%;
+            right: 3%;
+          }
+          .items{
+            display: none;
+          }
+        }
+      }
+    }
+    .close-nav{
+        width: 100%;
+        .header-nav-wrapper {
+          width: 100%;
+          height: 100vh;
+          background-color: rgba(0, 0, 0, 0.7);
+          top: 0px;
+          .header-nav{  
+            background-color: $White;
+            opacity: 9;
+            width: 100%;
+            margin: auto;
+            padding: 40px 0%;
+            justify-content: space-around;
+            .menu-wrapper {
+              display: block;
+              .open {
+                width: 25px;
+                display: block;
+                cursor: pointer;
+              }
+              .close {
+                display: none;
+                width: 25px;
+                height: 25px;
+              }
+            }
+            .logo-wrapper {
+              display: none;
+            }
+            .items {
+              position: relative;
+              display: block
+            }
+            li{
+              font-weight: 700;
+              color: $Black;
+            }
+          }
+          
+        }
+    }
+    .slides {
+      width: 100%;
+      .slide-container {
+        width: 100%;
+        height: 700px;
+        .image-text-container {
+          height: 100%;
+          .float {
+            .images-txt-wrapper {
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              .image-slide{
+                width: 100%;
+                height: 360px;
+              }
+              .text-slide{
+                width: 85%;
+                text-align: left;
+                h2 {
+                  line-height: 25px;
+                  font-size: 24px;
+                  padding-bottom: 15px;
+                }
+                p {
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      
+      .angles-wrapper{
+          width: 150px;
+          height: 60;
+          top: 42%;
+          left: 60%;
+          .angle-left,.angle-right {
+            padding: 20px 30.5px;
+          }
+        }
+    }
+  }
+}
+
+@media screen and (max-width: 360px){
+  .header{
+    .slides{
+      .angles-wrapper{
+        left: 48%;
+      }
+    }
+  }
+}
+
+
+
